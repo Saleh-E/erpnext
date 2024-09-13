@@ -77,12 +77,8 @@
   "column_break3",
   "contact_html",
   "contact_display",
-  "items_section",
-  "items",
-  "section_break_32",
-  "base_total",
-  "column_break_33",
-  "total",
+  "properties_tab",
+  "properties",
   "activities_tab",
   "open_activities_html",
   "all_activities_section",
@@ -90,7 +86,13 @@
   "notes_tab",
   "notes_html",
   "notes",
-  "dashboard_tab"
+  "dashboard_tab",
+  "items_section",
+  "items",
+  "section_break_32",
+  "base_total",
+  "column_break_33",
+  "total"
  ],
  "fields": [
   {
@@ -226,7 +228,9 @@
    "fieldname": "items_section",
    "fieldtype": "Tab Break",
    "label": "Items",
-   "options": "fa fa-shopping-cart"
+   "options": "fa fa-shopping-cart",
+   "print_hide": 1,
+   "report_hide": 1
   },
   {
    "fieldname": "items",
@@ -620,12 +624,23 @@
    "fieldtype": "Link",
    "label": "Country",
    "options": "Country"
+  },
+  {
+   "fieldname": "properties_tab",
+   "fieldtype": "Tab Break",
+   "label": "Properties"
+  },
+  {
+   "fieldname": "properties",
+   "fieldtype": "Table",
+   "label": "Properties",
+   "options": "Opportunity Property"
   }
  ],
  "icon": "fa fa-info-sign",
  "idx": 195,
  "links": [],
- "modified": "2024-08-20 04:12:29.095761",
+ "modified": "2024-09-12 07:20:10.752403",
  "modified_by": "Administrator",
  "module": "CRM",
  "name": "Opportunity",

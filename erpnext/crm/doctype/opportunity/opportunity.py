@@ -31,14 +31,12 @@ class Opportunity(TransactionBase, CRMNote):
 	from typing import TYPE_CHECKING
 
 	if TYPE_CHECKING:
-		from frappe.types import DF
-
 		from erpnext.crm.doctype.competitor_detail.competitor_detail import CompetitorDetail
 		from erpnext.crm.doctype.crm_note.crm_note import CRMNote
 		from erpnext.crm.doctype.opportunity_item.opportunity_item import OpportunityItem
-		from erpnext.crm.doctype.opportunity_lost_reason_detail.opportunity_lost_reason_detail import (
-			OpportunityLostReasonDetail,
-		)
+		from erpnext.crm.doctype.opportunity_lost_reason_detail.opportunity_lost_reason_detail import OpportunityLostReasonDetail
+		from frappe.types import DF
+		from realestate.realestate.doctype.opportunity_property.opportunity_property import OpportunityProperty
 
 		address_display: DF.TextEditor | None
 		amended_from: DF.Link | None
@@ -79,6 +77,7 @@ class Opportunity(TransactionBase, CRMNote):
 		phone: DF.Data | None
 		phone_ext: DF.Data | None
 		probability: DF.Percent
+		properties: DF.Table[OpportunityProperty]
 		sales_stage: DF.Link | None
 		source: DF.Link | None
 		state: DF.Data | None
